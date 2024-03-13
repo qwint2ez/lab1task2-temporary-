@@ -466,22 +466,22 @@ void MainWindow::on_scaleUpButton_pressed()
         hex->setSideHexagon(sideHexagon);
     }
     else if (FiveStar* fstar = dynamic_cast<FiveStar*>(currentShape)) {
-        fradius = fradius * 1.01;
-        fstar->setRadius(fradius);
+        int newFRadius = fstar->getFRadius() * 1.01;
+        fstar->setFRadius(newFRadius);
     }
     else if (SixStar* sstar = dynamic_cast<SixStar*>(currentShape)) {
-        sradius = sradius * 1.01;
-        sstar->setRadius(sradius);
+        int newSRadius = sstar->getSRadius() * 1.01;
+        sstar->setSRadius(newSRadius);
     }
     else if (EightStar* estar = dynamic_cast<EightStar*>(currentShape)) {
-        eradius = eradius * 1.01;
-        estar->setRadius(eradius);
+        int newERadius = estar->getERadius() * 1.01;
+        estar->setERadius(newERadius);
     }
     else if (Ellipse* ell = dynamic_cast<Ellipse*>(currentShape)){
-        ewidth = ewidth * 1.01;
-        eheight = eheight * 1.01;
-        ell->setEWidth(ewidth);
-        ell->setEHeight(eheight);
+            int newEWidth = ell->getEWidth() * 1.01;
+            int newEHeight = ell->getEHeight() * 1.01;
+            ell->setEWidth(newEWidth);
+            ell->setEHeight(newEHeight);
     }
 }
 
@@ -520,22 +520,22 @@ void MainWindow::on_scaleDownButton_pressed()
         hex->setSideHexagon(sideHexagon);
     }
     else if (FiveStar* fstar = dynamic_cast<FiveStar*>(currentShape)) {
-        fradius = fradius / 1.01;
-        fstar->setRadius(fradius);
+        int newFRadius = fstar->getFRadius() / 1.01;
+        fstar->setFRadius(newFRadius);
     }
     else if (SixStar* sstar = dynamic_cast<SixStar*>(currentShape)) {
-        sradius = sradius / 1.01;
-        sstar->setRadius(sradius);
+        int newSRadius = sstar->getSRadius() / 1.01;
+        sstar->setSRadius(newSRadius);
     }
     else if (EightStar* estar = dynamic_cast<EightStar*>(currentShape)) {
-        eradius = eradius / 1.01;
-        estar->setRadius(eradius);
+        int newERadius = estar->getERadius() / 1.01;
+        estar->setERadius(newERadius);
     }
     else if (Ellipse* ell = dynamic_cast<Ellipse*>(currentShape)){
-        ewidth = ewidth / 1.01;
-        eheight = eheight / 1.01;
-        ell->setEWidth(ewidth);
-        ell->setEHeight(eheight);
+        int newEWidth = ell->getEWidth() / 1.01;
+        int newEHeight = ell->getEHeight() / 1.01;
+        ell->setEWidth(newEWidth);
+        ell->setEHeight(newEHeight);
     }
 }
 

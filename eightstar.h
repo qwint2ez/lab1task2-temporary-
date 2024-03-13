@@ -14,11 +14,12 @@ public:
     QGraphicsEllipseItem* getCenterOfMass() override;
     QGraphicsLineItem* getLine1() override { return line1; }
     QGraphicsLineItem* getLine2() override { return line2; }
+    int getERadius() const { return eradius; }
     double getArea() override;
     double getPerimeter() override;
     void moveCenterOfMass(double dx, double dy);
     void scale(double factor);
-    void setRadius(int newERadius) { eradius = newERadius; }
+    void setERadius(int newERadius) { eradius = newERadius; }
 
 private:
     QGraphicsPolygonItem *estar;

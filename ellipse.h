@@ -7,12 +7,14 @@
 class Ellipse : public Shape
 {
 public:
-    Ellipse(int width, int height);
+    Ellipse(int ewidth, int eheight);
 
     QGraphicsEllipseItem* getItem() override;
     QGraphicsEllipseItem* getCenterOfMass() override;
     QGraphicsLineItem* getLine1() override { return line1; }
     QGraphicsLineItem* getLine2() override { return line2; }
+    int getEWidth() const { return ewidth; }
+    int getEHeight() const { return eheight; }
     double getArea() override;
     double getPerimeter() override;
     void moveCenterOfMass(double dx, double dy);
